@@ -56,6 +56,9 @@ function SetUnsetAccessory(accessory)
 				if _accessory == "mask" then
 					mAccessory = 0
 				end
+				if _accessory == "glasses" then
+					mAccessory = 5
+				end
 				if skin[_accessory .. '_1'] == mAccessory then
 					mAccessory = accessorySkin[_accessory .. '_1']
 					mColor = accessorySkin[_accessory .. '_2']
