@@ -53,16 +53,18 @@ function SetUnsetAccessory(accessory)
 			TriggerEvent('skinchanger:getSkin', function(skin)
 				local mAccessory = -1
 				local mColor = 0
+
 				if _accessory == "mask" then
 					mAccessory = 0
-				end
-				if _accessory == "glasses" then
+				elseif _accessory == "glasses" then
 					mAccessory = 5
 				end
+
 				if skin[_accessory .. '_1'] == mAccessory then
 					mAccessory = accessorySkin[_accessory .. '_1']
 					mColor = accessorySkin[_accessory .. '_2']
 				end
+
 				local accessorySkin = {}
 				accessorySkin[_accessory .. '_1'] = mAccessory
 				accessorySkin[_accessory .. '_2'] = mColor
